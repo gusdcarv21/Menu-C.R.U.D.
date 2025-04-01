@@ -11,9 +11,21 @@ def menu(request):
 
 def cadastrar(request):
 
-    cadastrar=[]
+        if request.method == 'POST':
+        print("Dados recebidos com sucesso")
 
-    return render(request, 'cadastrar.html')
+        nome = request.POST.get('nome')
+        descrição = request.POST.get('descrição')
+        valor = request.POST.get('valor')
+        quantidade_em_estoque = request.POST.get('quantidade_em_estoque')
+
+        
+        cadastrar=[]
+        produto.nome = nome
+        produto.descrição = descrição
+        produto.preço
+
+        return render(request, 'cadastrar.html')
 
 def listar(request):
     listar=[]

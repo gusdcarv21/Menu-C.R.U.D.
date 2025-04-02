@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from CRUD.models import produto
+
 # Create your views here.
 
 def menu(request):
@@ -12,7 +14,7 @@ def menu(request):
 def cadastrar(request):
 
         if request.method == 'POST':
-        print("Dados recebidos com sucesso")
+            print("Dados recebidos com sucesso")
 
         nome = request.POST.get('nome')
         descrição = request.POST.get('descrição')

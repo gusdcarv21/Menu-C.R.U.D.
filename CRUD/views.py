@@ -26,11 +26,14 @@ def cadastrar(request):
         produto.nome = nome
         produto.descrição = descrição
         produto.preço
+        produto.quantidade_em_estoque = quantidade_em_estoque
+
 
         return render(request, 'cadastrar.html')
 
 def listar(request):
     listar=[]
+    
     return render (request, 'listar.html')
 
 def atualizar(request):

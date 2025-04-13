@@ -12,29 +12,27 @@ def menu(request):
 
 
 def cadastrar(request):
-
-        if request.method == 'POST':
-            print("Dados recebidos com sucesso")
-
+    if request.method == 'POST':
         nome = request.POST.get('nome')
         descrição = request.POST.get('descrição')
         valor = request.POST.get('valor')
         quantidade_em_estoque = request.POST.get('quantidade_em_estoque')
 
-        
-        cadastrar=[]
-        produto.nome = nome
-        produto.descrição = descrição
-        produto.preço
-        produto.quantidade_em_estoque = quantidade_em_estoque
+        novo_produto = produto(
+            nome=nome,
+            descrição=descrição,
+            preço=valor,
+            quantidade_em_estoque=quantidade_em_estoque
+        )
 
+        novo_produto.save()  # <-- isso salva no banco
 
-        return render(request, 'cadastrar.html')
+    return render(request, 'cadastrar.html')
 
 def listar(request):
-    listar=[]
+    produtos = produto.objects.all()
     
-    return render (request, 'listar.html')
+    return render (request, 'listar.html', {'produtos':produtos})
 
 def atualizar(request):
     atualizar=[]

@@ -1,18 +1,52 @@
+{%load static%}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <style>
+         body{
+            background-image: url(/static/pexels-tima-miroshnichenko-5711022.jpg);
+        } 
+
+        .container{
+            border: solid;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu{
+            border: solid black;
+            background-color: cadetblue;
+            border-radius: 5px;
+            width: 300px;
+            height: 250px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* background-color: aqua; */
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem vindo ao CRUD!</h1>
-    <h2>O que deseja fazer?</h2>
-    <ul>
-        <li><a href="cadastro/">Cadastrar um produto</a></li>
-        <li><a href="listar/">listar os produtos</a></li>
-        <li><a href="atualizar/">Atualizar</a></li>
-        <li><a href="deletar/">Deletar</a></li>
-    </ul>
+    <div class="cabeçalho"></div>
+    <div class="container">
+        <h1>Bem vindo ao CRUD!</h1>
+        <h2>O que deseja fazer?</h2>
+    <div class="menu">
+            <ul>
+                <a href="cadastro/">Cadastrar um produto</a>
+                <br>
+                <a href="listar/">listar os produtos</a>
+                <br>
+                <a href="atualizar/">Atualizar</a>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

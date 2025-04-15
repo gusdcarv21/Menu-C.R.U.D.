@@ -8,6 +8,8 @@ class produto(models.Model):
     preço = models.CharField(max_length=10)  # ou DecimalField
     quantidade_em_estoque = models.IntegerField()  # <-- adicione isso
 
+    def __str__(self):
+        return self.nome
 
 
 

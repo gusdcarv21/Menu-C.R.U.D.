@@ -20,7 +20,7 @@ from CRUD import views
 
 urlpatterns = [
     path('', views.menu ),
-    path('cadastro/', views.cadastrar),
+    path('cadastrar/', views.cadastrar),
     path('listar/', views.listar),
     path('atualizar/', views.atualizar),
     path('deletar/', views.deletar),
